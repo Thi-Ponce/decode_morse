@@ -7,53 +7,26 @@
 
 def decode_char(char)
 	@morse_letter = @dictionary[char]
-	puts @morse_letter
+	@morse_letter
 end
 
 def decode_word(char)
 	split_char = char.split(' ')
-
+	@str = ''
 	split_char.each do |i| 
-		@morse_letter = @dictionary[i]
-		@str = ''
-		@str += @morse_letter
-
-	print @str
+		@str += decode_char(i)
 	end
+	@str
 end
 
-# def decode(char)
-# 	split_char = char.split('   ')
-
-# 	split_char.each do |i| 
-# 		@str = decode_word(i)
-
-# 		print @str
-# 		# @morse_letter = @dictionary[i]
-# 		# @str = ''
-# 		# @str += @morse_letter
-
-# 	# print @str
-# 	end
-
-# 	# split_char.each do |i| 
-# 	# 	@morse_letter = @dictionary[i]
-# 	# 	@str = ''
-# 	# 	@str += @morse_letter
-
-# 	# print @str
-# 	# end
-# end
 
 def decode(words)
     @split_words = words.split('   ')
-    puts @split_words
+	@str = ''
     @split_words.each do |word|
-    	@str =''
         @str += "#{decode_word(word)} "
-        print @str
     end
-    # print @str
+	@str
   end
 
 
