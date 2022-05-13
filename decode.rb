@@ -1,6 +1,6 @@
 #!/usr/bin/env ruby
 
-@dictionary = { '.-' => 'A', '-...' => 'B', '-.-.' => 'C', '-..' => 'D', '.' => 'E',
+@@dictionary = { '.-' => 'A', '-...' => 'B', '-.-.' => 'C', '-..' => 'D', '.' => 'E',
                 '..-.' => 'F', '--.' => 'G', '....' => 'H', '..' => 'I', '.---' => 'J',
                 '-.-' => 'K', '.-..' => 'L', '--' => 'M', '-.' => 'N', '---' => 'O',
                 '.--.' => 'P', '--.-' => 'Q', '.-.' => 'R', '...' => 'S', '-' => 'T',
@@ -10,8 +10,8 @@
                 '-----' => 0 }
 
 def decode_char(chars)
-  @morse_letter = @dictionary[char]
-  @morse_letter
+  @@morse_letter = @@dictionary[char]
+  @@morse_letter
 end
 
 def decode_word(char)
