@@ -9,7 +9,7 @@
                 '.....' => 5, '-....' => 6, '--...' => 7, '---..' => 8, '----.' => 9,
                 '-----' => 0 }
 
-def decode_char(char)
+def decode_char(chars)
   @morse_letter = @dictionary[char]
   @morse_letter
 end
