@@ -11,7 +11,7 @@
 
 def decode_char(char)
   @morse_letter = @dictionary[char]
-  @morse_letter
+  @morse_lette
 end
 
 def decode_word(char)
@@ -24,7 +24,7 @@ def decode_word(char)
 end
 
 def decode(words)
-  @split_words = words.split('   ')
+  @split_word = words.split('   ')
   @str = ''
   @split_words.each do |word|
     @str += "#{decode_word(word)} "
